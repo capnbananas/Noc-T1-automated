@@ -29,7 +29,7 @@ def connect_client_device(network_device):
         if 'RSA key' in output.lower():
             connection.write_channel('{}\n'.format('yes'))
         if 'password' in output.lower():
-            connection.write_channel('{}\n'.format('-S@radog12'))
+            connection.write_channel('{}\n'.format('password'))
             time.sleep(10)
         redispatch(connection, device_type='cisco_ios')
         chk_enable = connection.check_enable_mode()
